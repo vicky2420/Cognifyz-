@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#colorButton {
+    background-color: lightblue;
+}
+
+#calculator {
+    margin-top: 20px;
+}
+
+#calculator input {
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#todo {
+    margin-top: 20px;
+}
+
+#todo input {
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#todoList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#todoList li {
+    background-color: lightgrey;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode button {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dark-mode #colorButton {
+    background-color: #555555;
+}
