@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Responsive Card Layout</title>
+  <style>
+    .custom-card {
+      margin-bottom: 30px;
+    }
+    .navbar {
+      margin-bottom: 30px;
+    }
+    footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        My Website
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#">
+          Home
+        </a>
+        <a class="navbar-item" href="#">
+          Documentation
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bulma Card Component -->
+  <div class="container mt-5">
+    <div class="card" style="max-width: 300px; margin: auto;">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="https://static.vecteezy.com/system/resources/previews/009/314/126/non_2x/default-avatar-profile-in-flat-design-free-png.png" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">Bulma Card Title</p>
+            <p class="subtitle is-6">Bulma Card Subtitle</p>
+          </div>
+        </div>
+        <div class="content">
+            This is some new example text for this card. It describes the content of the card in more detail.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Responsive Grid Layout -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="card custom-card">
+          <img src="https://png.pngtree.com/png-vector/20230321/ourmid/pngtree-profile-avatar-of-young-man-in-blue-shirt-and-hat-vector-png-image_6658604.png" alt="Placeholder image">
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap Card Title 1</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card custom-card">
+          <img src="https://t3.ftcdn.net/jpg/05/34/22/36/360_F_534223627_0JFVJDBwNku7LyLazrtN6YBTJ2agUfP5.jpg" class="card-img-top" alt="Placeholder image">
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap Card Title 2</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card custom-card">
+          <img src="https://png.pngtree.com/png-vector/20240611/ourmid/pngtree-flat-people-man-icon-illustration-vector-png-image_12650661.png" class="card-img-top" alt="Placeholder image">
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap Card Title 3</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card custom-card">
+          <img src="https://cdn-icons-png.freepik.com/512/4166/4166820.png" class="card-img-top" alt="Placeholder image">
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap Card Title 4</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card custom-card">
+          <img src="https://cdn4.iconfinder.com/data/icons/business-users-1/256/woman_black_business.png" class="card-img-top" alt="Placeholder image">
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap Card Title 5</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card custom-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3220/3220315.png" class="card-img-top" alt="Placeholder image">
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap Card Title 6</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-5">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Responsive Card Layout</strong> by <a href="#">Vicky</a>. 
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
