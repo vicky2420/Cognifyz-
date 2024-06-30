@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Cognifyz</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="burger" aria-label="Toggle navigation" aria-expanded="false" role="button">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Cognifyz</h1>
+            <p>Your partner in digital transformation</p>
+            <button class="cta">Learn More</button>
+        </section>
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-container">
+                <div class="service">
+                    <h3>Consulting</h3>
+                    <p>Expert advice to take your business to the next level</p>
+                </div>
+                <div class="service">
+                    <h3>Development</h3>
+                    <p>Building custom solutions tailored to your needs</p>
+                </div>
+                <div class="service">
+                    <h3>Design</h3>
+                    <p>Creative designs that make your brand stand out</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cognifyz. All rights reserved</p>
+    </footer>
+    <script>
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('.nav-links li');
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.setAttribute('aria-expanded', nav.classList.contains('active'));
+        });
+
+        navLinks.forEach((link, index) => {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+        });
+
+        nav.addEventListener('transitionend', () => {
+            if (!nav.classList.contains('active')) {
+                navLinks.forEach(link => link.style.animation = '');
+            }
+        });
+    </script>
+</body>
+</html>
