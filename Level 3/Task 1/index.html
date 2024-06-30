@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Image Gallery and Slideshow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Gallery</h1>
+        <input type="text" id="searchBar" placeholder="Search images..." onkeyup="filterImages()">
+        <div class="gallery" id="gallery">
+            <div class="gallery-item" title="This is a caption for Thumbnail 1">
+                <img src="https://t1.uc.ltmcdn.com/en/posts/9/9/9/how_to_create_high_resolution_photos_using_300_dpi_4999_600.jpg" alt="Thumbnail 1" onclick="showImage('image1.jpg')" loading="lazy">
+                <div class="caption">Bee</div>
+            </div>
+            <div class="gallery-item" title="This is a caption for Thumbnail 2">
+                <img src="https://m.web.umkc.edu/mkakh3/assignment3/images/nature_300x300.jpg" alt="Thumbnail 2" onclick="showImage('image2.jpg')" loading="lazy">
+                <div class="caption">Nature</div>
+            </div>
+            <div class="gallery-item" title="This is a caption for Thumbnail 3">
+                <img src="https://images.all-free-download.com/images/thumbjpg/orange_crush_514795.jpg" alt="Thumbnail 3" onclick="showImage('image3.jpg')" loading="lazy">
+                <div class="caption">Flower</div>
+            </div>
+            <div class="gallery-item" title="This is a caption for Thumbnail 4">
+                <img src="https://images.pexels.com/photos/97533/pexels-photo-97533.jpeg?cs=srgb&dl=pexels-siva301in-97533.jpg&fm=jpg" alt="Thumbnail 4" onclick="showImage('image4.jpg')" loading="lazy">
+                <div class="caption">Bird</div>
+            </div>
+            <div class="gallery-item" title="This is a caption for Thumbnail 5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI2RLOBO8DYvk8aAUNEs6DJzCJzlgHT7HfAg&s" alt="Thumbnail 5" onclick="showImage('image5.jpg')" loading="lazy">
+                <div class="caption">Car</div>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox" onclick="hideImage()">
+            <img id="lightbox-img" src="" alt="Enlarged Image">
+            <button id="fullscreen-toggle">Toggle Fullscreen</button>
+            <a id="download-link" href="#" download>Download</a>
+        </div>
+        
+        <h1>Slideshow</h1>
+        <div class="slideshow-container">
+            <div class="slideshow">
+                <div class="slides fade">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4q9lQMhFnGX9UX9HE40GJ90riJxzWd34TGA&s" alt="Slide 1" loading="lazy">
+                    <div class="caption">Nature</div>
+                </div>
+                <div class="slides fade">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFdQyvYsl5491gjaqUHAfyGigVToAfH3c-9IKAIjbL-pqilbq4HhOhUh4Uyft5h7t_P4&usqp=CAU" alt="Slide 2" loading="lazy">
+                    <div class="caption">Hills Road</div>
+                </div>
+                <div class="slides fade">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2rPqbeAeLXPeumBw1dz_Lm4vzfyd5NFuSDw&s" alt="Slide 3" loading="lazy">
+                    <div class="caption">Town City</div>
+                </div>
+                <div class="slides fade">
+                    <img src="https://e0.pxfuel.com/wallpapers/789/947/desktop-wallpaper-new-york-christmas-group-new-york-city-christmas-thumbnail.jpg" alt="Slide 4" loading="lazy">
+                    <div class="caption">Capital City</div>
+                </div>
+                <div class="slides fade">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN3njA54q5RLWayYOiONI_258ePtJElPl-I5k5kSVWc7Sw4IKZSdNEzvZRhspePFStNdE&usqp=CAU" alt="Slide 5" loading="lazy">
+                    <div class="caption">Road</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)" aria-label="Previous slide">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)" aria-label="Next slide">&#10095;</a>
+            </div>
+            <br>
+            <div class="thumbnail-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLuzK2wgj1pYFDRabOiBsx8DqlOibv46BH8g&s" alt="Thumbnail 1" onclick="currentSlide(1)" class="thumbnail">
+                <img src="https://m.web.umkc.edu/mkakh3/assignment3/images/nature_300x300.jpg" alt="Thumbnail 2" onclick="currentSlide(2)" class="thumbnail">
+                <img src="https://images.all-free-download.com/images/thumbjpg/orange_crush_514795.jpg" alt="Thumbnail 3" onclick="currentSlide(3)" class="thumbnail">
+                <img src="https://images.pexels.com/photos/97533/pexels-photo-97533.jpeg?cs=srgb&dl=pexels-siva301in-97533.jpg&fm=jpg" alt="Thumbnail 4" onclick="currentSlide(4)" class="thumbnail">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI2RLOBO8DYvk8aAUNEs6DJzCJzlgHT7HfAg&s" alt="Thumbnail 5" onclick="currentSlide(5)" class="thumbnail">
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)" aria-label="Slide 1"></span>
+                <span class="dot" onclick="currentSlide(2)" aria-label="Slide 2"></span>
+                <span class="dot" onclick="currentSlide(3)" aria-label="Slide 3"></span>
+                <span class="dot" onclick="currentSlide(4)" aria-label="Slide 4"></span>
+                <span class="dot" onclick="currentSlide(5)" aria-label="Slide 5"></span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="slide-counter" id="slide-counter">1 / 5</div>
+        </div>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        let slideInterval;
+        let progressBar = document.getElementById('progress-bar');
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            let slideCounter = document.getElementById("slide-counter");
+            if (n >= slides.length) {
+                slideIndex = 0;
+            }
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex].style.display = "block";
+            dots[slideIndex].className += " active";
+            slideCounter.textContent = (slideIndex + 1) + " / " + slides.length;
+            clearInterval(slideInterval);
+            slideInterval = setInterval(function() {
+                plusSlides(1);
+            }, 3000); // Change image every 3 seconds
+            resetProgressBar();
+        }
+
+        function showImage(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('download-link').href = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function hideImage() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        // Keyboard navigation for slideshow
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "ArrowLeft") {
+                plusSlides(-1);
+            } else if (event.key === "ArrowRight") {
+                plusSlides(1);
+            }
+        });
+
+        // Progress bar functionality
+        function resetProgressBar() {
+            progressBar.style.width = '0%';
+            let width = 0;
+            let interval = setInterval(function() {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width++;
+                    progressBar.style.width = width + '%';
+                }
+            }, 30);
+        }
+
+        // Dark mode toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Fullscreen toggle for lightbox
+        document.getElementById('fullscreen-toggle').addEventListener('click', function() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        });
+
+        // Filter images based on search input
+        function filterImages() {
+            let input = document.getElementById('searchBar');
+            let filter = input.value.toLowerCase();
+            let gallery = document.getElementById('gallery');
+            let items = gallery.getElementsByClassName('gallery-item');
+            for (let i = 0; i < items.length; i++) {
+                let caption = items[i].getElementsByClassName('caption')[0];
+                if (caption.innerHTML.toLowerCase().indexOf(filter) > -1) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+
+        // Initialize slideshow
+        showSlides(slideIndex);
+    </script>
+</body>
+</html>
